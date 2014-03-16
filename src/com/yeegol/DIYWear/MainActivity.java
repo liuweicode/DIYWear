@@ -307,8 +307,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback,
 					}).create();
 			dialog.show();
 		} else {
-			mBrandModel = list.get(0);
-			mHandler.sendMessage(mHandler.obtainMessage(2));
+			if(list!=null){
+				mBrandModel = list.get(0);
+				mHandler.sendMessage(mHandler.obtainMessage(2));
+			}
 		}
 	}
 

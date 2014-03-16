@@ -14,7 +14,13 @@ public class StrUtil {
 	private static final String TAG = StrUtil.class.getName();
 
 	public static int StringToInt(String s) {
-		return Integer.valueOf(s);
+		int i = -1;
+		try{
+			i = Integer.valueOf(s);
+		}catch(Exception e){
+			i=0;
+		}
+		return i;
 	}
 
 	public static int ObjToInt(Object o) {
